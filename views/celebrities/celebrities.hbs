@@ -1,0 +1,21 @@
+
+
+<h2>ALL CELEBRITIES</h2>
+
+<form action="/celebrities" method="POST" ></form>
+
+ {{#if celebrities}}
+    {{#each celebrities}}
+    <div class="col-4">
+        <div class="card m-1">
+            <div class="card-body">
+                <h5 class="card-title">{{this.title}} - {{this.name}} - {{this.occupation}}</h5>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <p>Sorry, no results matches your filter</p>
+    {{/if}}
+
+    </form>

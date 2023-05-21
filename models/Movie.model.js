@@ -1,15 +1,14 @@
-//  Add your code here
 
-//ITERATION#2
 
 const { Schema, model } = require("mongoose");
 
-const celebritySchema = new Schema(
+const movieSchema = new Schema(
     {
-    name: String,
+        name: String,
     },
     {   
-    occupation: String,   
+    occupation: String, 
+    enum: ["actor", "comedian", "singer", "unknown"]   
     },
     {
     catchPhrase: String, 
